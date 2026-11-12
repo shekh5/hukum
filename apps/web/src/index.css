@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+/* Dark mode follows the OS setting (Tailwind's default `dark:` behaviour). */
+body {
+  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+/* Minimal styling for Markdown inside agent bubbles. */
+.markdown > * + * {
+  margin-top: 0.6em;
+}
+.markdown ul {
+  list-style: disc;
+  padding-left: 1.25em;
+}
+.markdown ol {
+  list-style: decimal;
+  padding-left: 1.25em;
+}
+.markdown a {
+  text-decoration: underline;
+}
+.markdown code {
+  @apply rounded bg-slate-100 px-1 py-0.5 font-mono text-[0.9em] dark:bg-slate-700;
+}
+.markdown pre {
+  @apply overflow-x-auto rounded-lg bg-slate-100 p-3 dark:bg-slate-900;
+}
+.markdown pre code {
+  @apply bg-transparent p-0;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  font-weight: 600;
+}
